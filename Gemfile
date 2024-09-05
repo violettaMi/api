@@ -8,6 +8,7 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
+gem 'pg_search'
 
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
@@ -19,6 +20,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem 'dotenv-rails'
+  gem 'pry'
 end
 
 group :development do
