@@ -1,0 +1,15 @@
+recipe_ingredient_one:
+  recipe: recipe_one
+  ingredient: flour
+
+recipe_ingredient_two:
+  recipe: recipe_one
+  ingredient: cornmeal
+
+recipe_ingredient_three:
+  recipe: recipe_two
+  ingredient: flour
+
+recipe_ingredient_four:
+  recipe: recipe_two
+  ingredient: sugar
