@@ -2,22 +2,27 @@
 <h3>Let's find recipes that you can prepare with the ingredients you have at home</h3>
 
 <%= form_with(url: recipes_path, method: :get, local: true) do %>
-  <%= label_tag :ingredients, "Search by Ingredients (comma-separated):" %>
+  <%= label_tag :ingredients, "Ingredients:" %>
   <%= text_field_tag :ingredients, params[:ingredients], placeholder: "e.g. flour, sugar" %>
   <%= submit_tag "Search" %>
 <% end %>
 
-<h1>Recipes</h1>
+<hr>
+<h2>Recipes:</h2>
+<hr>
 
 <% if @recipes.any? %>
-  <ul>
-    <% @recipes.each do |recipe| %>
-      <li>
-        <%= recipe.title %> - Ingredients:
-        <%= recipe.ingredients.map(&:name).join(", ") %>
-      </li>
+  <% @recipes.each do |recipe| %>
+      <div class="recipe">
+        <h2><%= recipe.title %></h2>
+        <p><strong>Cook Time:</strong> <%= recipe.cook_time %> minutes</p>
+        <p><strong>Prep Time:</strong> <%= recipe.prep_time %> minutes</p>
+        <p><strong>Ratings:</strong> <%= recipe.ratings %></p>
+        <p><strong>Ingredients:</strong> <%= recipe.ingredients.map(&:name).join(", ") %></p>
+        <p><strong>Author:</strong> <%= recipe.author.name %></p>
+      </div>
+      <hr>
     <% end %>
-  </ul>
-<% else %>
-  <p>No recipes found.</p>
+  <% else %>
+    <p>No recipes found.</p>
 <% end %>
