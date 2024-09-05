@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
     if params[:ingredients].present?
       ingredients = params[:ingredients].split(',').map(&:strip)
 
-      @recipes = Recipe.search_by_ingredients(ingredients).page(params[:page]).per(10)
+      @recipes = Recipe.search_by_ingredients(ingredients) #TODO: add pagination
     else
       @recipes = Recipe.all #TODO: think what to show
     end

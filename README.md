@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It's dinner time!
+The application helps users find the most relevant recipes that they can prepare with the ingredients they have at home.
 
-Things you may want to cover:
+Ruby 3.2.2; Rails 7.2.1; PostgreSQL; pg-search.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
+* How to run the test suite:
 * Deployment instructions
-
 * ...
